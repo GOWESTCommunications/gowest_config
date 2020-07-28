@@ -1,0 +1,131 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="DIR:./Library/Setup/" extensions="typoscript">
+
+lib.page.fields {
+    rootPid = TEXT
+    rootPid.value = {$const.rootpid}
+
+    brandname = TEXT
+    brandname.value = {$const.address.company}
+  
+    bodyclass = CASE
+    bodyclass {
+        key {
+            ifEmpty.data = levelfield:-1, backend_layout_next_level, slide
+            field = backend_layout
+        }
+        default = COA
+        default {
+        
+            10 = TEXT
+            10 {
+                data = pagelayout
+                required = 1
+                case = lowercase
+                split {
+                    token = pagets__
+                    cObjNum = 1
+                    1.current = 1
+                }
+            }
+            
+            20 = TEXT
+            20 {
+                stdWrap.noTrimWrap = | pid| root{$const.rootpid}|
+                data = tsfe:id
+            }
+            
+            #Add Category UIDs of Page
+            30 = CONTENT
+            30 {
+                table = sys_category
+                select {
+                    pidInList = 1
+                    selectFields = LOWER(sys_category.uid) as CUid
+                    join = sys_category_record_mm on sys_category_record_mm.uid_local = sys_category.uid
+                    where.data = page:uid
+                    where.wrap = sys_category_record_mm.uid_foreign=|
+                }
+                renderObj = COA
+                renderObj {
+                    1 = TEXT
+                    1 {
+                        field = CUid
+                        stdWrap.noTrimWrap = | cat-||
+                    }
+                }
+            }
+        }
+    }
+    
+    sitelinks = JSON
+    sitelinks {
+        dataProcessing {
+            10 = FriendsOfTYPO3\Headless\DataProcessing\MenuProcessor
+            10 {
+                special = directory
+                special.value = {$const.sitelinks}
+                levels = 7
+                expandAll = 1
+                includeSpacer = 0
+                titleField = nav_title // title
+                as = sitelinksNavigation
+            }
+        }
+    }
+          
+    sociallinks {
+        dataProcessing {
+            10 = FriendsOfTYPO3\Headless\DataProcessing\MenuProcessor
+            10 {
+                special = directory
+                special.value = {$const.sociallinkspid}
+                levels = 7
+                expandAll = 1
+                includeSpacer = 0
+                titleField = nav_title // title
+                as = sociallinksNavigation
+            }
+        }
+    }
+          
+    partnerlinks = JSON
+    partnerlinks {
+        dataProcessing {
+            10 = FriendsOfTYPO3\Headless\DataProcessing\MenuProcessor
+            10 {
+                special = directory
+                special.value = {$const.partnerlinkspid}
+                levels = 7
+                expandAll = 1
+                includeSpacer = 0
+                titleField = nav_title // title
+                as = partnerlinksNavigation
+                dataProcessing {
+                    10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+                    10 {
+                        references.fieldName = media
+                        as = media
+                    }
+                }
+				
+            }
+        }
+    }
+    
+    subtitle = TEXT
+    subtitle.field = subtitle
+}
+
+
+lib.primaryNavigation.dataProcessing.10 {
+    dataProcessing {
+        10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+        10 {
+            references.fieldName = media
+            as = media
+        }
+    }
+}

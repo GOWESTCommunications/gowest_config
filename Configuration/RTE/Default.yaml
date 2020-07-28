@@ -1,0 +1,82 @@
+imports:
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+
+editor:
+    externalPlugins:
+        nbsp:   { resource: "EXT:gowest_config/Resources/Public/RTE/plugins/nbsp/plugin.js" }
+    config:
+        contentsCss: "EXT:gowest_config/Resources/Public/RTE/css/rte.css"
+
+        stylesSet:
+            - { name: "Lead", element: "p", attributes: { 'class': 'lead' } }
+            - { name: "Button Primary", element: "a", attributes:{'class':'btn btn-primary'} }
+            - { name: "Button Secondary", element: "a", attributes:{'class':'btn btn-secondary'} }
+            - { name: "Button Success", element: "a", attributes:{'class':'btn btn-success'} }
+            - { name: "Button Danger", element: "a", attributes:{'class':'btn btn-danger'} }
+            - { name: "Button Warning", element: "a", attributes:{'class':'btn btn-warning'} }
+            - { name: "Button Info", element: "a", attributes:{'class':'btn btn-info'} }
+            - { name: "Button Light", element: "a", attributes:{'class':'btn btn-light'} }
+            - { name: "Button Dark", element: "a", attributes:{'class':'btn btn-dark'} }
+            - { name: "Button Outline Primary", element: "a", attributes:{'class':'btn btn-outline-primary'} }
+            - { name: "Button Outline Secondary", element: "a", attributes:{'class':'btn btn-outline-secondary'} }
+            - { name: "Button Outline Success", element: "a", attributes:{'class':'btn btn-outline-success'} }
+            - { name: "Button Outline Danger", element: "a", attributes:{'class':'btn btn-outline-danger'} }
+            - { name: "Button Outline Warning", element: "a", attributes:{'class':'btn btn-outline-warning'} }
+            - { name: "Button Outline Info", element: "a", attributes:{'class':'btn btn-outline-info'} }
+            - { name: "Button Outline Light", element: "a", attributes:{'class':'btn btn-outline-light'} }
+            - { name: "Button Outline Dark", element: "a", attributes:{'class':'btn btn-outline-dark'} }
+            - { name: "Button Large Primary", element: "a", attributes:{'class':'btn btn-primary btn-lg'} }
+            - { name: "Button Large Secondary", element: "a", attributes:{'class':'btn btn-secondary btn-lg'} }
+            - { name: "Button Small Primary", element: "a", attributes:{'class':'btn btn-primary btn-sm'} }
+            - { name: "Button Small Secondary", element: "a", attributes:{'class':'btn btn-secondary btn-sm'} }
+            - { name: "Table Plain", element: "table", attributes:{'class':'ce-table plain'} }
+            - { name: "Table Striped", element: "table", attributes:{'class':'ce-table switchable striped'} }
+            - { name: "Table Cell Plain", element: "td", attributes:{'class':'plain'} }
+            - { name: "Table Headercell Plain", element: "th", attributes:{'class':'plain'} }
+            
+        toolbar:
+            - [ 'Undo', 'Redo' ]
+            - [ 'RemoveFormat' ]
+            - [ 'Bold', 'Italic', 'Underline', 'Strike']
+            - [ 'Subscript', 'Superscript' ]
+            - [ 'SpecialChar' ]
+            - [ 'Link', 'Unlink', 'Styles' ]
+            - [ 'NonBreakingSpace' ]
+            - '/'
+            - [ 'Format' ]
+            - [ 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ]
+            - [ 'NumberedList', 'BulletedList']
+            - [ 'Table' ]
+            - [ 'Blockquote' ]
+            - [ 'Source' ]
+
+        format_tags: "p;h3;h4;h5;h6;address;pre;div"
+
+        justifyClasses:
+            - text-left
+            - text-center
+            - text-right
+            - text-justify
+
+        extraPlugins:
+            - justify
+            - font
+            - find
+            - bidi
+
+        removePlugins:
+            - image
+
+        removeButtons:
+            - Anchor
+            - Underline
+            - Strike
+            
+        specialChars: [ '&lt;', ,'&shy;', '&gt;', '@', '[', ']', '^', '|', '~', '&euro;', '&cent;', '&copy;', '&reg;', '&trade;', '&deg;', '&sup1;', '&sup2;', '&sup3;', '&micro;', '&ordm;', '&frac14;', '&frac12;', '&frac34;','&times;',  '&divide;', '&hellip;' ]
+
+buttons:
+    link:
+        relAttribute:
+            enabled: true

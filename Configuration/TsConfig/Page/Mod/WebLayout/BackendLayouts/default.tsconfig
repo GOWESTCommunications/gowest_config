@@ -1,0 +1,37 @@
+#
+# BACKENDLAYOUT: DEFAULT
+#
+mod {
+    web_layout {
+        BackendLayouts {
+            default {
+                title = Default
+                config {
+                    backend_layout {
+                        colCount = 1
+                        rowCount = 2
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = Media
+                                        colPos = 50
+                                    }
+                                }
+                            }
+                            2 {
+                                columns {
+                                    1 {
+                                        name = Content
+                                        colPos = 0
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                icon = EXT:gowest_config/Resources/Public/Images/BackendLayouts/default.svg
+            }
+        }
+    }
+}

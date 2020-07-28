@@ -1,0 +1,83 @@
+#
+# TCEFORM
+#
+TCEFORM {
+    pages {
+        doktype {
+            removeItems = 6,7,199
+            disableNoMatchingValueElement = 1
+        }
+        
+        backend_layout {
+            altLabels.0 = None / Standard
+            removeItems = -1
+        }
+        
+        backend_layout_next_level < .backend_layout
+    
+        urltype {
+            altLabels.0 = none
+        }
+        
+        layout.disabled = 1
+        cache_tags.disabled = 1
+        no_cache.disabled = 1
+    
+        newUntil.disabled = 1
+        lastUpdated.disabled = 1
+        
+        abstract.disabled = 1
+        
+        
+    }
+    
+    tt_content {
+        CType.removeItems = textpic,bullets,table,menu_abstract,menu_categorized_content,menu_categorized_pages,menu_pages,menu_subpages,menu_recently_updated,menu_related_pages,menu_section,menu_section_pages,menu_sitemap,menu_sitemap_pages
+        
+        space_before_class.disabled = 1
+        categories.disabled = 1
+        header_link.disabled = 1
+        
+        layout {
+            disabled = 0
+            removeItems = 1,2,3
+            altLabels.0 = 
+            addItems {
+                10 = Alert Primary
+                11 = Alert Secondary
+                12 = Alert Success
+                13 = Alert Danger
+                14 = Alert Warning
+                15 = Alert Info
+            }
+        }
+        
+        space_after_class {
+            altLabels.. = Default
+            removeItems = extra-small,extra-large,medium
+            addItems {
+                none = None
+            }
+        }
+        
+        frame_class {
+            removeItems = ruler-before,ruler-after,indent,indent-left,indent-right
+            addItems {
+                container-grid = Grid Width
+                container-fluid = Fluid Width
+            }
+        }
+        
+        header_layout {
+            removeItems = 1,2,4,5
+            altLabels.1 = H1
+            altLabels.2 = H2
+            altLabels.3 = H3
+            altLabels.4 = H4
+            altLabels.5 = H5
+        }
+        
+        imageborder.disabled = 1
+        
+    }
+}

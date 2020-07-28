@@ -1,0 +1,58 @@
+## Define custom categories
+# customsubcategory=base=Base
+# customsubcategory=address=Address
+# customsubcategory=pagetransition=Pagetransition
+# customsubcategory=dotnavigation=Dot Navigation
+
+#cat=Base-Constants/base; type=integer; label=root PID (pages)
+const.rootpid     = 1
+
+#cat=Base-Constants/base; type=integer; label=Search PID (pages)
+const.searchpid     = 12
+
+#cat=Base-Constants/base; type=int; label=Sitelinks UID
+const.sitelinks = 15
+
+#cat=Base-Constants/base; type=int; label=Sociallinks UID
+const.sociallinkspid = 12
+
+#cat=Base-Constants/base; type=int; label=Partnerlinks UID
+const.partnerlinkspid = 12
+
+#cat=Base-Constants/base; type=string; label=Plain Icon path
+const.plainicon_path     = /typo3conf/ext/gowest_config/Resources/Public/Images/plainicon.png
+
+#cat=Base-Constants/address/010; type=string; label=Company
+const.address.company     = GO.WEST
+#cat=Base-Constants/address/011; type=string; label=Company (Subline)
+const.address.company_sub = Communications GmbH
+
+#cat=Base-Constants/address/020; type=string; label=City
+const.address.city       = Salzburg
+
+#cat=Base-Constants/address/030; type=string; label=ZIP code
+const.address.zip        = 5020
+
+#cat=Base-Constants/address/040; type=string; label=Street
+const.address.street     = Siezenheimer Straße 39 B
+
+#cat=Base-Constants/address/050; type=string; label=Country (Name)
+const.address.country     = Austria 
+#cat=Base-Constants/address/051; type=string; label=Country (ISO 3166-1 alpha-2)
+const.address.country_iso = AT 
+
+#cat=Base-Constants/address/060; type=string; label=Phone number (human readable)
+const.address.phone      = +43 662 88 05 40-0
+#cat=Base-Constants/address/061; type=string; label=Phone number (RFC 3966)
+const.address.phone_rfc  = +43-662-880540-0
+#cat=Base-Constants/address/061; type=string; label=Hotline (RFC 3966)
+const.address.hotline  = +43-662-880540-0
+
+#cat=Base-Constants/address/070; type=string; label=Fax number (human readable)
+const.address.fax        = +43 662 88 05 40-11
+#cat=Base-Constants/address/071; type=string; label=Fax number (RFC 3966)
+const.address.fax_rfc    = +43-662-880540-11
+
+#cat=Base-Constants/address/080; type=string; label=E-Mail-Address
+const.address.email   = service@go-west.at
+

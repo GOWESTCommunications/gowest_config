@@ -1,0 +1,39 @@
+lib.ADDRESS = COA
+lib.ADDRESS {
+
+    company = TEXT
+    company.value = {$const.address.company}
+    
+    company_sub = TEXT
+    company_sub.value = {$const.address.company_sub}
+    
+    street = TEXT
+    street.value = {$const.address.street}
+    
+    zip = TEXT
+    zip.value = {$const.address.zip}
+    
+    city = TEXT
+    city.value = {$const.address.city}
+    
+    country = TEXT
+    country.value = {$const.address.country}
+    
+    country_iso = TEXT
+    country_iso.value = {$const.address.country_iso}
+    
+    phone = TEXT
+    phone.value = {$const.address.phone}
+    
+    phone_rfc = TEXT
+    phone_rfc.value = {$const.address.phone_rfc}
+    
+    hotline = TEXT
+    hotline.value = {$const.address.hotline}
+    
+    fax = TEXT
+    fax.value = {$const.address.fax}
+    
+    email = TEXT
+    email.value = {$const.address.email}
+}

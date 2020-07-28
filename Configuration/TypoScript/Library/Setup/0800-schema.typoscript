@@ -1,0 +1,30 @@
+lib.schema {
+    company             = TEXT
+    company.value       = {$const.address.company}
+    
+    street              = TEXT
+    street.value        = {$const.address.street}
+    
+    zip                 = TEXT
+    zip.value           = {$const.address.zip}
+    
+    city                = TEXT
+    city.value          = {$const.address.city}
+    
+    phone               = TEXT
+    phone.value         = {$const.address.phone_rfc}
+            
+    fax                 = TEXT
+    fax.value           = {$const.address.fax}
+    
+    email               = TEXT
+    email.value         = {$const.address.email}
+    
+    http_host           = TEXT
+    http_host.stdWrap.insertData = 1
+    http_host.value     = {getIndpEnv:TYPO3_REQUEST_HOST}
+    
+    plainicon           = TEXT
+    plainicon.stdWrap.insertData = 1
+    plainicon.value     = {getIndpEnv:TYPO3_REQUEST_HOST}{$const.plainicon_path}
+}

@@ -1,0 +1,45 @@
+#
+# BACKENDLAYOUT: LANDINGPAGE
+#
+mod {
+    web_layout {
+        BackendLayouts {
+            landingpage {
+                title = Landingpage
+                config {
+                    backend_layout {
+                        colCount = 1
+                        rowCount = 3
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = Teaser
+                                        colPos = 50
+                                    }
+                                }
+                            }
+                            2 {
+                                columns {
+                                    1 {
+                                        name = Content
+                                        colPos = 0
+                                    }
+                                }
+                            }
+                            3 {
+                                columns {
+                                    1 {
+                                        name = Forms
+                                        colPos = 120
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                icon = EXT:gowest_config/Resources/Public/Images/BackendLayouts/default.svg
+            }
+        }
+    }
+}

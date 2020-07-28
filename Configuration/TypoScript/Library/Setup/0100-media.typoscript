@@ -1,0 +1,25 @@
+lib.media {
+    width-xs = {$const.width-xs}
+    height-xs = {$const.height-xs}
+    
+    width-sm = {$const.width-sm}
+    height-sm = {$const.height-sm}
+    
+    width-md = {$const.width-md}
+    height-md = {$const.height-md}
+    
+    width-lg = {$const.width-lg}
+    height-lg = {$const.height-lg}
+    
+    home-width-xs = {$const.home-width-xs}
+    home-height-xs = {$const.home-height-xs}
+    
+    home-width-sm = {$const.home-width-sm}
+    home-height-sm = {$const.home-height-sm}
+    
+    home-width-md = {$const.home-width-md}
+    home-height-md = {$const.home-height-md}
+    
+    home-width-lg = {$const.home-width-lg}
+    home-height-lg = {$const.home-height-lg}
+}

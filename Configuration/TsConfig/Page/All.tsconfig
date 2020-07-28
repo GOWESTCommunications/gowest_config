@@ -1,0 +1,12 @@
+#
+# PageTS for GO.WEST Config
+#
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gowest_config/Configuration/TsConfig/Page/RTE.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gowest_config/Configuration/TsConfig/Page/TCEFORM.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gowest_config/Configuration/TsConfig/Page/TCEMAIN.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gowest_config/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig">
+
+# Sorting for Flux FCEs (Info -> Page TSconfig)
+mod.wizards.newContentElement.wizardItems.Grid_Elements.after = common
+mod.wizards.newContentElement.wizardItems.Special_Elements.elements.mediaImage.tt_content_defValues.frame_class = none
+mod.wizards.newContentElement.wizardItems.Special_Elements.elements.mediaVideo.tt_content_defValues.frame_class = none

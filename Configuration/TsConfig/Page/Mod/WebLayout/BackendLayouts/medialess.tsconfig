@@ -1,0 +1,29 @@
+#
+# BACKENDLAYOUT: MEDIALESS
+#
+mod {
+    web_layout {
+        BackendLayouts {
+            medialess {
+                title = Medialess
+                config {
+                    backend_layout {
+                        colCount = 1
+                        rowCount = 1
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = Content
+                                        colPos = 0
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                icon = EXT:gowest_config/Resources/Public/Images/BackendLayouts/medialess.svg
+            }
+        }
+    }
+}

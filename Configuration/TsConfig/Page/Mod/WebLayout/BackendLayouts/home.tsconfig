@@ -1,0 +1,37 @@
+#
+# BACKENDLAYOUT: HOME
+#
+mod {
+    web_layout {
+        BackendLayouts {
+            home {
+                title = Home
+                config {
+                    backend_layout {
+                        colCount = 1
+                        rowCount = 3
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = Media
+                                        colPos = 50
+                                    }
+                                }
+                            }
+                            2 {
+                                columns {
+                                    1 {
+                                        name = Content
+                                        colPos = 0
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                icon = EXT:gowest_config/Resources/Public/Images/BackendLayouts/home.svg
+            }
+        }
+    }
+}

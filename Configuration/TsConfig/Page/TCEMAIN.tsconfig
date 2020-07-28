@@ -1,0 +1,12 @@
+#
+# TCEMAIN
+#
+TCEMAIN {
+    table {
+        pages.disablePrependAtCopy = 1
+        tt_content.disablePrependAtCopy = 1
+        tt_content.disableHideAtCopy = 1
+    }
+    translateToMessage = 
+    permissions.group = show,editcontent,new,edit,delete
+}

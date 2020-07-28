@@ -1,0 +1,19 @@
+#############
+#### RTE ####
+#############
+RTE {
+    default {
+        preset = gowest_config
+        
+        proc {
+            allowTags := addToList(iframe)
+            entryHTMLparser_db.allowTags := addToList(iframe)
+        }
+        
+        init {
+            extended_valid_elements = iframe
+        }
+        
+        buttons.link.queryParametersSelector.enabled = 1
+    }
+}

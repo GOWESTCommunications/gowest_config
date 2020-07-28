@@ -1,0 +1,23 @@
+{
+    "name": "gowest/gowest-config",
+    "type": "typo3-cms-extension",
+    "description": "GO.WEST Default Config",
+    "homepage": "https://www.go-west.at/",
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "keywords": [
+        "TYPO3 CMS"
+    ],
+    "version": "1.0.0",
+    "require": {
+        "typo3/cms-core": "^10",
+        "typo3/cms-rte-ckeditor": "^10",
+        "typo3/cms-fluid-styled-content": "^10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gowest\\GowestConfig\\": "Classes/"
+        }
+    }
+}

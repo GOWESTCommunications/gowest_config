@@ -1,0 +1,67 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript">
+<INCLUDE_TYPOSCRIPT: source="DIR:./Library/Constants/" extensions="typoscript">
+
+##############################
+#### FLUID STYLED CONTENT ####
+##############################
+styles {
+    content.links.extTarget = _blank
+    templates {
+        layoutRootPath = EXT:gowest_config/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:gowest_config/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:gowest_config/Resources/Private/Templates/ContentElements/
+    }
+}
+
+
+############
+### PAGE ###
+############
+page {
+     fluidtemplate {
+        layoutRootPath = EXT:gowest_config/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:gowest_config/Resources/Private/Partials/Page/
+        templateRootPath = EXT:gowest_config/Resources/Private/Templates/Page/
+    }
+    meta {
+        description =
+        author =
+        keywords =
+        viewport = width=device-width, initial-scale=1, user-scalable=0
+        robots = index,follow
+        apple-mobile-web-app-capable = no
+        compatible = IE=edge
+    }
+    tracking {
+        google {
+            trackingID =
+            anonymizeIp = 1
+        }
+    }
+}
+
+############
+### Flux ###
+############
+fluxstyles {
+    templates {
+        layoutRootPath = EXT:gowest_config/Resources/Private/Layouts/
+        partialRootPath = EXT:gowest_config/Resources/Private/Partials/
+        templateRootPath = EXT:gowest_config/Resources/Private/Templates/
+    }
+}
+
+##############
+### CONFIG ###
+##############
+config {
+    no_cache = 0
+    removeDefaultJS = 0
+    admPanel = 1
+    prefixLocalAnchors = all
+    headerComment = Realisierung: GO.WEST Communications GmbH <https://go-west.at>
+    sendCacheHeaders = 1
+}

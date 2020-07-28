@@ -1,0 +1,33 @@
+# cat=Media Dimensions/001; label=Width (xs)
+const.width-xs = 600
+# cat=Media Dimensions/002; label=Height (xs)
+const.height-xs = 600
+# cat=Media Dimensions/003; label=Width (sm)
+const.width-sm = 991
+# cat=Media Dimensions/004; label=Height (sm)
+const.height-sm = 496
+# cat=Media Dimensions/005; label=Width (md)
+const.width-md = 1301
+# cat=Media Dimensions/006; label=Height (md)
+const.height-md = 430
+# cat=Media Dimensions/007; label=Width (lg)
+const.width-lg = 1905
+# cat=Media Dimensions/008; label=Height (lg)
+const.height-lg = 635
+
+# cat=Media Dimensions/009; label=Home Width (xs)
+const.home-width-xs = 600
+# cat=Media Dimensions/010; label=Home Height (xs)
+const.home-height-xs = 1200
+# cat=Media Dimensions/011; label=Home Width (sm)
+const.home-width-sm = 991
+# cat=Media Dimensions/012; label=Home Height (sm)
+const.home-height-sm = 1321
+# cat=Media Dimensions/013; label=Home Width (md)
+const.home-width-md = 1301
+# cat=Media Dimensions/014; label=Home Height (md)
+const.home-height-md = 732
+# cat=Media Dimensions/015; label=Home Width (lg)
+const.home-width-lg = 1920
+# cat=Media Dimensions/016; label=Home Height (lg)
+const.home-height-lg = 1080

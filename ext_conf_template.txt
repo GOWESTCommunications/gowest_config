@@ -1,0 +1,4 @@
+# customcategory=google_maps=Google Maps
+
+# cat=google_maps; type=string; label=API Key: If set, it will be used for backend fields with a location picker
+googleMaps.ApiKey =

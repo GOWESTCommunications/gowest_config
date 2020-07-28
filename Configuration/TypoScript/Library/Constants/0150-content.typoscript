@@ -1,0 +1,4 @@
+styles.content.imgtext.xs.maxW = 760
+styles.content.imgtext.sm.maxW = 700
+styles.content.imgtext.md.maxW = 940
+styles.content.imgtext.lg.maxW = 1240
