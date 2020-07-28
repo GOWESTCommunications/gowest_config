@@ -1,0 +1,71 @@
+.cke_editable {
+    margin: 20px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+.btn {
+	padding: 4px;
+	text-decoration: none;
+    color: #000;
+    border: 2px solid transparent;
+}
+
+.btn-lg {
+    padding: 6px;
+}
+
+.btn-sm {
+    padding: 2px;
+}
+
+.btn-primary { background: blue; color: white;}
+.btn-secondary { background: #0B0B61; color: white;}
+.btn-success { background: green;color: white; }
+.btn-danger { background: red; color: white;}
+.btn-warning { background: orange; color: black;}
+.btn-info { background: #81DAF5; color: black;}
+.btn-light { background: white; color: black;}
+.btn-dark { background: black; color: white;}
+
+.btn-outline-primary { border: 1px solid blue; background: none; color: black;}
+.btn-outline-secondary { border: 1px solid #0B0B61; background: none; color: black;}
+.btn-outline-success { border: 1px solid green;background: none; color: black; }
+.btn-outline-danger { border: 1px solid red; background: none; color: black;}
+.btn-outline-warning { border: 1px solid orange; background: none; color: black;}
+.btn-outline-info { border: 1px solid #81DAF5; background: none; color: black;}
+.btn-outline-light { border: 1px solid white; background: none; color: black;}
+.btn-outline-dark { border: 1px solid black; background: none; color: black;}
+
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+.text-justify { text-align: justify; }
+
+.lead {
+    font-size: 1.3rem;
+}
+
+table.cke_show_border,
+table.cke_show_border td,
+table.cke_show_border th,
+table.cke_show_border caption {
+	border: 1px solid #bbb;
+}
+
+.cke_contents_ltr blockquote {
+	border: 1px solid #bbb !important;
+}
+
+.cke_contents_ltr blockquote * {
+	font-style: italic;
+	text-align: center;
+}
+
+.cke_combopanel {
+    width: 200px !important;
+}
+
+.cke_panel_listItem a,
+.cke_panel_listItem a * {
+    font-size: 13px !important;
+}

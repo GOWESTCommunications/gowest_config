@@ -60,6 +60,12 @@ lib.page.fields {
         }
     }
     
+    summary = TEXT
+    summary.field = tx_gowestconfig_summary
+    
+    subtitle = TEXT
+    subtitle.field = subtitle
+    
     sitelinks = JSON
     sitelinks {
         dataProcessing {
@@ -114,9 +120,6 @@ lib.page.fields {
             }
         }
     }
-    
-    subtitle = TEXT
-    subtitle.field = subtitle
 }
 
 
@@ -127,5 +130,17 @@ lib.primaryNavigation.dataProcessing.10 {
             references.fieldName = media
             as = media
         }
+    }
+}
+
+lib.contentElement.fields.appearance.fields {
+    gutter = TEXT
+    gutter.field = tx_gowestconfig_gutter
+}
+
+lib.contentElementWithHeader.fields.content.fields {
+    summary = TEXT
+    summary {
+        field = tx_gowestconfig_summary
     }
 }
