@@ -131,6 +131,13 @@ lib.primaryNavigation.dataProcessing.10 {
             as = media
         }
     }
+    overwriteMenuLevelConfig {
+        stdWrap.cObject {
+            100 = TEXT
+            100.field = uid
+            100.wrap = ,"uid":|
+        }
+ }
 }
 
 lib.contentElement.fields.appearance.fields {
