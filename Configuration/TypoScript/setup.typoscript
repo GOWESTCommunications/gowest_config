@@ -136,11 +136,12 @@ lib.primaryNavigation.dataProcessing.10 {
 lib.contentElement.fields.appearance.fields {
     gutter = TEXT
     gutter.field = tx_gowestconfig_gutter
+    hideBreakpoints = TEXT
+    hideBreakpoints.field = tx_gowestconfig_hide_in_breakpoint
 }
 
 lib.contentElementWithHeader.fields.content.fields {
     summary = TEXT
-    summary {
-        field = tx_gowestconfig_summary
-    }
+    summary.field = tx_gowestconfig_summary
+    
 }
