@@ -3,6 +3,29 @@
 ######################
 <INCLUDE_TYPOSCRIPT: source="DIR:./Library/Setup/" extensions="typoscript">
 
+#############
+#### RTE ####
+#############
+lib.parseFunc_RTE {
+    externalBlocks {
+        table {
+            stdWrap.HTMLparser.tags.table.fixAttrib.class.default = ce-table switchable
+            stdWrap.HTMLparser.tags.table.fixAttrib.class.list := addToList(switchable, ce-table, plain, striped)
+            stdWrap.HTMLparser.tags.td.fixAttrib.class.list := addToList(plain,text-left,text-right,text-justify,text-center)
+            stdWrap.HTMLparser.tags.th.fixAttrib.class.list := addToList(plain,text-left,text-right,text-justify,text-center)
+        }
+    }
+}
+
+lib.parseFunc {
+    nonTypoTagStdWrap.HTMLparser.tags.ul.fixAttrib.class.default = ce-bullets
+    nonTypoTagStdWrap.HTMLparser.tags.ol.fixAttrib.class.default = ce-bullets
+}
+
+
+###################
+#### PAGE JSON ####
+###################
 lib.page.fields {
     rootPid = TEXT
     rootPid.value = {$const.rootpid}
@@ -120,6 +143,28 @@ lib.page.fields {
             }
         }
     }
+
+    address = JSON
+    address.fields {
+        company = TEXT
+        company.value = {$const.address.company}
+        compan_sub = TEXT
+        company_sub.value = {$const.address.company_sub}
+        city = TEXT
+        city.value = {$const.address.city}
+        zip = TEXT
+        zip.value = {$const.address.zip}
+        street = TEXT
+        street.value = {$const.address.street}
+        country = TEXT
+        country.value = {$const.address.country}
+        phone = TEXT
+        phone.value = {$const.address.phone_rfc}
+        fax = TEXT
+        fax.value = {$const.address.fax_rfc}
+        email = TEXT
+        email.value = {$const.address.email}
+    }
 }
 
 
@@ -145,6 +190,8 @@ lib.contentElement.fields.appearance.fields {
     gutter.field = tx_gowestconfig_gutter
     hideBreakpoints = TEXT
     hideBreakpoints.field = tx_gowestconfig_hide_in_breakpoint
+    layout = TEXT
+    layout.field = layout
 }
 
 lib.contentElementWithHeader.fields.content.fields {
@@ -152,3 +199,53 @@ lib.contentElementWithHeader.fields.content.fields {
     summary.field = tx_gowestconfig_summary
     
 }
+
+tt_content.image {
+    fields {
+        content {
+            fields {
+                image_zoom = TEXT
+                image_zoom.field = image_zoom
+            }
+        }
+    }
+}
+
+
+
+
+tt_content.gridelements_pi1 =< lib.contentElementWithHeader
+tt_content.gridelements_pi1 {
+
+    fields {
+        type.stdWrap.cObject = TEXT
+        type.stdWrap.cObject.value = gridelements
+        
+        content{
+            fields {
+                structure = JSON
+                structure.fields {
+                    layout = TEXT
+                    layout {
+                        field = tx_gridelements_backend_layout
+                    }
+
+                    rows = JSON
+                    rows {
+                        dataProcessing {
+                            #10 = ITplusX\HeadlessGridelements\DataProcessing\GridChildrenProcessor
+                            10 = GridElementsTeam\Gridelements\DataProcessing\GridChildrenProcessor
+                            10 {
+                                default {
+                                    as = children
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+tt_content.gridelements_view < tt_content.gridelements_pi1
