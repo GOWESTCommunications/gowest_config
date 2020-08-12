@@ -230,13 +230,18 @@ tt_content.gridelements_pi1 {
                         field = tx_gridelements_backend_layout
                     }
 
+                    colconfig = TEXT
+                    colconfig.data = field:colconfig
+
                     rows = JSON
                     rows {
                         dataProcessing {
                             #10 = ITplusX\HeadlessGridelements\DataProcessing\GridChildrenProcessor
-                            10 = GridElementsTeam\Gridelements\DataProcessing\GridChildrenProcessor
+                            #10 = GridElementsTeam\Gridelements\DataProcessing\GridChildrenProcessor
+                            10 = GoWest\GowestContentelements\DataProcessing\GridChildrenProcessor
                             10 {
                                 default {
+                                    #tt_content < tt_content
                                     as = children
                                 }
                             }
