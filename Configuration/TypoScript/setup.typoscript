@@ -10,16 +10,18 @@ lib.parseFunc_RTE {
     externalBlocks {
         table {
             stdWrap.HTMLparser.tags.table.fixAttrib.class.default = ce-table switchable
-            stdWrap.HTMLparser.tags.table.fixAttrib.class.list := addToList(switchable, ce-table, plain, striped)
-            stdWrap.HTMLparser.tags.td.fixAttrib.class.list := addToList(plain,text-left,text-right,text-justify,text-center)
-            stdWrap.HTMLparser.tags.th.fixAttrib.class.list := addToList(plain,text-left,text-right,text-justify,text-center)
+            stdWrap.HTMLparser.tags.table.fixAttrib.class.list = switchable, ce-table, plain, striped
+            stdWrap.HTMLparser.tags.td.fixAttrib.class.list = plain,text-left,text-right,text-justify,text-center
+            stdWrap.HTMLparser.tags.th.fixAttrib.class.list = plain,text-left,text-right,text-justify,text-center
         }
     }
 }
 
 lib.parseFunc {
     nonTypoTagStdWrap.HTMLparser.tags.ul.fixAttrib.class.default = ce-bullets
+    nonTypoTagStdWrap.HTMLparser.tags.ul.fixAttrib.class.list = ce-bullets
     nonTypoTagStdWrap.HTMLparser.tags.ol.fixAttrib.class.default = ce-bullets
+    nonTypoTagStdWrap.HTMLparser.tags.ol.fixAttrib.class.list = ce-bullets
 }
 
 
@@ -221,6 +223,11 @@ tt_content.gridelements_pi1 {
         type.stdWrap.cObject = TEXT
         type.stdWrap.cObject.value = gridelements
         
+        colconfig = TEXT
+        colconfig.data = flexform: pi_flexform:colconfig
+        colconfig.insertData = 1
+
+        
         content{
             fields {
                 structure = JSON
@@ -230,8 +237,7 @@ tt_content.gridelements_pi1 {
                         field = tx_gridelements_backend_layout
                     }
 
-                    colconfig = TEXT
-                    colconfig.data = field:colconfig
+                    
 
                     rows = JSON
                     rows {
