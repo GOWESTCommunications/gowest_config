@@ -213,6 +213,27 @@ tt_content.image {
     }
 }
 
+tt_content.textmedia {
+    fields {
+        content {
+            fields {
+                image_zoom = TEXT
+                image_zoom.field = image_zoom
+            }
+        }
+    }
+}
+
+tt_content.textpic {
+    fields {
+        content {
+            fields {
+                image_zoom = TEXT
+                image_zoom.field = image_zoom
+            }
+        }
+    }
+}
 
 
 
