@@ -208,6 +208,7 @@ tt_content.image {
             fields {
                 image_zoom = TEXT
                 image_zoom.field = image_zoom
+                image_zoom.intval = 1
             }
         }
     }
@@ -219,6 +220,7 @@ tt_content.textmedia {
             fields {
                 image_zoom = TEXT
                 image_zoom.field = image_zoom
+                image_zoom.intval = 1
             }
         }
     }
@@ -230,6 +232,7 @@ tt_content.textpic {
             fields {
                 image_zoom = TEXT
                 image_zoom.field = image_zoom
+                image_zoom.intval = 1
             }
         }
     }
