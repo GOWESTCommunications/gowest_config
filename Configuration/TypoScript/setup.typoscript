@@ -199,7 +199,6 @@ lib.contentElement.fields.appearance.fields {
 lib.contentElementWithHeader.fields.content.fields {
     summary = TEXT
     summary.field = tx_gowestconfig_summary
-    
 }
 
 tt_content.image {
