@@ -65,6 +65,7 @@ TCEFORM {
             addItems {
                 container-grid = Grid Width
                 container-fluid = Fluid Width
+                container-small = Small Width
             }
         }
         
