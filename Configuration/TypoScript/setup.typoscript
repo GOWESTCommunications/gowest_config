@@ -150,7 +150,7 @@ lib.page.fields {
     address.fields {
         company = TEXT
         company.value = {$const.address.company}
-        compan_sub = TEXT
+        company_sub = TEXT
         company_sub.value = {$const.address.company_sub}
         city = TEXT
         city.value = {$const.address.city}
@@ -237,6 +237,49 @@ tt_content.textpic {
     }
 }
 
+tt_content.uploads =< lib.contentElementWithHeader
+tt_content.uploads {
+    fields {
+        content {
+            fields {
+                media = TEXT
+                media {
+                    dataProcessing {
+                        10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+                        10 {
+                            references.fieldName = media
+                            collections.field = file_collections
+                            sorting {
+                                field = filelink_sorting
+                                sorting.direction.field = filelink_sorting_direction
+                            }
+                            as = files
+                        }
+                    }
+                }
+                target = TEXT
+                target {
+                    field = target
+                }
+                displayFileSizeInformation = TEXT
+                displayFileSizeInformation {
+                    field = filelink_size
+                    intval = 1
+                }
+                displayDescription = TEXT
+                displayDescription {
+                    field = uploads_description
+                    intval = 1
+                }
+                displayInformation = TEXT
+                displayInformation {
+                    field = uploads_type
+                    intval = 1
+                }
+            }
+        }
+    }
+}
 
 
 tt_content.gridelements_pi1 =< lib.contentElementWithHeader
