@@ -298,9 +298,14 @@ tt_content.gridelements_pi1 {
                         field = tx_gridelements_backend_layout
                     }
 
-                    colconfig = TEXT
-                    colconfig.data = flexform: pi_flexform:colconfig
-                    colconfig.insertData = 1
+                    flexform = TEXT
+                    flexform.dataProcessing {
+                        10 = GoWest\GowestContentelements\DataProcessing\LinkProcessor
+                        20 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
+                        20 {
+                            as = flexform_rendered
+                        }
+                    }
 
                     rows = JSON
                     rows {
