@@ -96,8 +96,8 @@ $GLOBALS['TCA']['sys_file_reference']['columns']['crop']['config']['cropVariants
 $GLOBALS['TCA']['sys_file_reference']['columns']['crop']['config']['cropVariants']['lg'] = $GLOBALS['TCA']['sys_file_reference']['columns']['crop']['config']['cropVariants']['xs'];
 $GLOBALS['TCA']['sys_file_reference']['columns']['crop']['config']['cropVariants']['lg']['title'] = 'LG';
 
-/*
-$GLOBALS['TCA']['sys_file_reference']['columns']['crop']['config']['ratios'] = [
+
+/*$GLOBALS['TCA']['sys_file_reference']['columns']['crop']['config']['ratios'] = [
     'NaN'    => [
         'title' => 'Free',
         'value' => 0.0,
@@ -147,8 +147,8 @@ $GLOBALS['TCA']['sys_file_reference']['columns']['crop']['config']['ratios'] = [
         'title' => '1:1',
         'value' => 1 / 1,
     ],
-];
-*/
+];*/
+
 
 $GLOBALS['TCA']['tt_content']['columns']['colPos']['config']['items'] = [
     '0' => ['normal', '0'],
@@ -159,3 +159,30 @@ $GLOBALS['TCA']['tt_content']['columns']['colPos']['config']['items'] = [
     '90' => ['inherited', '90'],
     '120' => ['landigpage', '120']
 ];
+
+// Reload if crop is enabled
+if($GLOBALS['TCA']['tt_content']['ctrl']['requestUpdate']) {
+    $GLOBALS['TCA']['tt_content']['ctrl']['requestUpdate'] .= ',tx_gowestconfig_crop';
+} else {
+    $GLOBALS['TCA']['tt_content']['ctrl']['requestUpdate'] .= 'tx_gowestconfig_crop';
+}
+
+
+// remove image orient field 
+$GLOBALS['TCA']['tt_content']['palettes']['gallerySettings']['showitem'] = str_replace('imageorient;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:imageorient_formlabel,', '', $GLOBALS['TCA']['tt_content']['palettes']['gallerySettings']['showitem']);
+
+
+$GLOBALS['TCA']['tt_content']['palettes']['mediaAdjustments']['showitem'] = str_replace(
+    'imagewidth;LLL:EXT:frontend/Resources/Private/Language/Database.xlf:tt_content.palette.mediaAdjustments.imagewidth,',
+    '
+    tx_gowestconfig_aspect_ratio;Aspect ratio,
+    tx_gowestconfig_crop;Cropping
+        ',
+    $GLOBALS['TCA']['tt_content']['palettes']['mediaAdjustments']['showitem']
+);
+
+$GLOBALS['TCA']['tt_content']['palettes']['mediaAdjustments']['showitem'] = str_replace(
+    'imageheight;LLL:EXT:frontend/Resources/Private/Language/Database.xlf:tt_content.palette.mediaAdjustments.imageheight,',
+'',
+$GLOBALS['TCA']['tt_content']['palettes']['mediaAdjustments']['showitem']
+);

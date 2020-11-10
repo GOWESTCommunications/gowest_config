@@ -208,6 +208,8 @@ tt_content.image {
                 image_zoom = TEXT
                 image_zoom.field = image_zoom
                 image_zoom.intval = 1
+                selectedRatio = TEXT
+                selectedRatio.field = tx_gowestconfig_aspect_ratio
             }
         }
     }
@@ -220,6 +222,8 @@ tt_content.textmedia {
                 image_zoom = TEXT
                 image_zoom.field = image_zoom
                 image_zoom.intval = 1
+                selectedRatio = TEXT
+                selectedRatio.field = tx_gowestconfig_aspect_ratio
             }
         }
     }
@@ -232,6 +236,8 @@ tt_content.textpic {
                 image_zoom = TEXT
                 image_zoom.field = image_zoom
                 image_zoom.intval = 1
+                selectedRatio = TEXT
+                selectedRatio.field = tx_gowestconfig_aspect_ratio
             }
         }
     }
@@ -328,3 +334,7 @@ tt_content.gridelements_pi1 {
 }
 
 tt_content.gridelements_view < tt_content.gridelements_pi1
+
+seo_sitemap.config.additionalHeaders.10.header = Content-Type:application/json;charset=utf-8
+
+lib.content.10.slide = -1

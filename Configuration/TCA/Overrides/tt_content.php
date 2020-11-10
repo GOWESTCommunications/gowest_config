@@ -55,6 +55,45 @@ $ttcontentColumn = array(
             'minitems' => '0'
         ),
     ),
+    'tx_gowestconfig_crop' => array(
+        'exclude' => 0,
+        'label'   => 'Cropping',
+        'onChange' => 'reload',
+                    'config'  => array(
+            'type'  => 'check',
+            'items' => array (
+                '1' => array(
+                    '0' => 'LLL:EXT:lang/locallang_core.xml:labels.enabled',
+                ),
+            ),
+        ),
+    ),
+    'tx_gowestconfig_aspect_ratio' => array (
+        'exclude' => 0,
+        'displayCond' => 'FIELD:tx_gowestconfig_crop:REQ:true',
+        'label'   => 'Aspect ratio',
+        'config'  => array (
+            'type'  => 'select',
+            'renderType' => 'selectSingle',
+            'items' => array (
+                array('default', 	'default', 		''),
+                array('2:1', 	'2:1', 		''),
+                array('1:1', 	'1:1', 		''),
+                array('3:2',    '3:2',  	''),
+                array('4:3', 	'4:3', 		''),
+                array('5:3',    '5:3',  	''),
+                array('8:5',    '8:5',  	''),
+                array('14:9',   '14:9', 	''),
+                array('16:9', 	'16:9', 	''),
+                array('64:27',  '64:27',	'')
+            ),
+            'size'          => 1,
+            'selicon_cols'  => 6,
+            'showIconTable' => 6,
+            'maxitems'      => 1,
+            'default'       => 'default',
+        )
+    ),
 );
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
     'tt_content',

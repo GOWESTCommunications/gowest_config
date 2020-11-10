@@ -1,0 +1,16 @@
+[
+<f:for each="{items}" as="item" iteration="iterator">
+    <f:if condition="{item.loc}">
+        {
+            "loc": "<f:format.raw>{item.loc}</f:format.raw>",
+            "lastmod": "<f:format.raw>{item.lastMod -> f:format.date(format: 'c')}</f:format.raw>"<f:if condition="{item.changefreq} || {item.priority}">,</f:if>
+            <f:if condition="{item.changefreq}">
+                "changefreq": "<f:format.raw>{item.changefreq}</f:format.raw>"<f:if condition="{item.priority}">,</f:if>
+            </f:if>
+            <f:if condition="{item.priority}">
+                "priority": <f:format.raw>{item.priority}</f:format.raw>
+            </f:if>
+        }<f:if condition="!{iterator.isLast}">,</f:if>
+    </f:if>
+</f:for>
+]
