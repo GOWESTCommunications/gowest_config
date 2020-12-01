@@ -167,6 +167,12 @@ lib.page.fields {
         email = TEXT
         email.value = {$const.address.email}
     }
+
+    dataprotection = TEXT
+    dataprotection.typolink {
+        parameter = {$const.dataprotectionpid}
+        returnLast = url
+    }
 }
 
 

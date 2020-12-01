@@ -19,6 +19,9 @@ const.sociallinkspid = 12
 #cat=Base-Constants/base; type=int; label=Partnerlinks UID
 const.partnerlinkspid = 12
 
+#cat=Base-Constants/base; type=int; label=Dataprotection UID
+const.dataprotectionpid = 16
+
 #cat=Base-Constants/base; type=string; label=Plain Icon path
 const.plainicon_path     = /typo3conf/ext/gowest_config/Resources/Public/Images/plainicon.png
 
