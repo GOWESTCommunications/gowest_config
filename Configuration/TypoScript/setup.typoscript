@@ -173,6 +173,12 @@ lib.page.fields {
         parameter = {$const.dataprotectionpid}
         returnLast = url
     }
+
+    searchpid = TEXT
+    searchpid.typolink {
+        parameter = {$const.searchpid}
+        returnLast = url
+    }
 }
 
 
@@ -290,6 +296,18 @@ tt_content.uploads {
                 }
             }
         }
+    }
+}
+
+meta.fields {
+    noindex = TEXT
+    noindex {
+        field = no_index
+    }
+    
+    nofollow = TEXT
+    nofollow {
+        field = no_follow
     }
 }
 
