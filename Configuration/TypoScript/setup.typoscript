@@ -179,6 +179,12 @@ lib.page.fields {
         parameter = {$const.searchpid}
         returnLast = url
     }
+
+    inquirypid = TEXT
+    inquirypid.typolink {
+        parameter = {$const.inquirypid}
+        returnLast = url
+    }
 }
 
 
