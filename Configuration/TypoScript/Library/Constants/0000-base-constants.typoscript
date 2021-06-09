@@ -10,6 +10,9 @@ const.rootpid     = 1
 #cat=Base-Constants/base; type=integer; label=Search PID (pages)
 const.searchpid     = 23
 
+#cat=Base-Constants/base; type=integer; label=Inquiry PID (pages)
+const.inquirypid     = 44
+
 #cat=Base-Constants/base; type=int; label=Sitelinks UID
 const.sitelinks = 15
 
