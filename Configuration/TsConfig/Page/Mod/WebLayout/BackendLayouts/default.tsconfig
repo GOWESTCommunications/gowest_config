@@ -9,7 +9,7 @@ mod {
                 config {
                     backend_layout {
                         colCount = 1
-                        rowCount = 2
+                        rowCount = 3
                         rows {
                             1 {
                                 columns {
@@ -24,6 +24,14 @@ mod {
                                     1 {
                                         name = Content
                                         colPos = 0
+                                    }
+                                }
+                            }
+                            3 {
+                                columns {
+                                    1 {
+                                        name = Additional Information (inherited)
+                                        colPos = 90
                                     }
                                 }
                             }
