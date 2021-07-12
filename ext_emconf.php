@@ -28,5 +28,5 @@ $EM_CONF['gowest_config'] = [
     'author' => 'Andreas Lochner',
     'author_email' => 'a.lochner@go-west.at',
     'author_company' => 'GO.WEST',
-    'version' => '1.0.3',
+    'version' => '1.0.4',
 ];
