@@ -27,6 +27,14 @@ mod {
                                     }
                                 }
                             }
+                            3 {
+                                columns {
+                                    1 {
+                                        name = Promotion-Overlay
+                                        colPos = 999
+                                    }
+                                }
+                            }
                         }
                     }
                 }
