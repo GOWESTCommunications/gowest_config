@@ -305,7 +305,7 @@ tt_content.uploads {
     }
 }
 
-meta.fields {
+lib.page.fields.meta.fields {
     noindex = TEXT
     noindex {
         field = no_index
