@@ -13,7 +13,6 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['sitename'] = sprintf(
 	(string)TYPO3\CMS\Core\Core\Environment::getContext()
 );
 
-
 /*** Enable changes via tsconfig for type and renderType (workaround: https://forge.typo3.org/issues/55976#note-12) ***/
 $reflectionClassFormEngineUtility = new ReflectionClass(\TYPO3\CMS\Backend\Form\Utility\FormEngineUtility::class);
 $reflectionPropertyAllowOverrideMatrix = $reflectionClassFormEngineUtility->getProperty('allowOverrideMatrix');
@@ -22,6 +21,9 @@ $allowOverrideMatrix = $reflectionPropertyAllowOverrideMatrix->getValue();
 $allowOverrideMatrix['input'][] = 'type';
 $allowOverrideMatrix['input'][] = 'renderType';
 $reflectionPropertyAllowOverrideMatrix->setValue($allowOverrideMatrix);
+
+// Cache clear hooks
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['clearCachePostProc'][] = \Gowest\GowestConfig\Hooks\CacheClearHook::class . '->clearCachePostProc';
 
 /***************
  * PageTS
