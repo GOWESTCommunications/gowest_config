@@ -254,8 +254,8 @@ class CloudflareService
             $ch = curl_init($url);
             curl_setopt_array($ch, [
                 CURLOPT_NOBODY => true, // Send HEAD instead of GET
-                CURLOPT_TIMEOUT => 1,
-                CURLOPT_CONNECT_TIMEOUT => 1,
+                CURLOPT_TIMEOUT_MS => 200,
+                CURLOPT_CONNECTTIMEOUT_MS => 100,
                 CURLOPT_NOSIGNAL => true,
                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_0,
                 CURLOPT_FOLLOWLOCATION => true,
