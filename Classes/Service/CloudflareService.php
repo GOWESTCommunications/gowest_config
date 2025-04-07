@@ -253,14 +253,13 @@ class CloudflareService
         foreach ($urls as $url) {
             $ch = curl_init($url);
             curl_setopt_array($ch, [
-                CURLOPT_NOBODY => true, // Send HEAD instead of GET
-                CURLOPT_TIMEOUT_MS => 200,
-                CURLOPT_CONNECTTIMEOUT_MS => 100,
+                CURLOPT_TIMEOUT_MS => 300,
+                CURLOPT_CONNECTTIMEOUT_MS => 200,
                 CURLOPT_NOSIGNAL => true,
                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_0,
                 CURLOPT_FOLLOWLOCATION => true,
                 CURLOPT_HEADER => false,
-                CURLOPT_RETURNTRANSFER => false,
+                CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_HTTPHEADER => [
                     'Connection: close'
                 ]
